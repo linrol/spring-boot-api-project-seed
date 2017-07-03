@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container">
+    <div class="page-header">
+        <h1 th:text="${title}">XX管理</h1>
+    </div>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <td>ID</td>
+            <td>用户名</td>
+            <td>昵称</td>
+        </tr>
+        </thead>
+        <tr th:each="user : ${userList}">
+            <td th:text="${user.id}">1</td>
+            <td th:text="${user.username}">xxxxxxx@qq.com</td>
+            <td th:text="${user.nickName}">Thymus Thymi</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
